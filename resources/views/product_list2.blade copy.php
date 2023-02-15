@@ -28,9 +28,12 @@ tr:nth-child(even) {
 <table>
   <tr>
     <th>#</th>
+    <th>name_of_sende</th>
+    <th>location_address</th>
     <th>name</th>
     <th>qty</th>
     <th>unity_price</th>
+    <th>order_id</th>
     <th>Action</th>
   </tr>
 @foreach ($data as $i=> $product)

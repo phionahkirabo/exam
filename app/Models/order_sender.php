@@ -9,11 +9,12 @@ class order_sender extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'name',
-        'name_of_sender',
+        // 'name',
+        'names_of_sender',
+        'email',
         'location_address',
-        'qty',
-        'unity_price',
+        // 'qty',
+        // 'unity_price',
         'order_id'
        
 

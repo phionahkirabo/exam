@@ -8,6 +8,7 @@
 @endif   --}}
 <form action="{{ url('saveProduct') }}" method="post">
     @csrf
+    {{-- <input type="hidden" name="DiseaseDiagnosed[]" value="{!! jsond_encode($DiseaseDiagnosed) !!}"> --}}
 Name: <input type="text" name="name"><br>
 Quantity: <input type="numbers" name="qty"><br>
 Unity price: <input type="numbers" name="unity_price"><br>

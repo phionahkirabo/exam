@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\productController;
+use App\Http\Controllers\orderController;
 use App\Models\order;
 use Illuminate\Support\Facades\Route;
 
@@ -24,9 +25,9 @@ Route::get('editProduct/{id}',[productController::class,'editproduct']);
 Route::post('updateProduct/{id}',[productController::class,'updateproduct']);
 Route::get('deleteProduct/{id}',[productController::class,'deleteproduct']);
 
-Route::get('productList2',[productController::class,'index']);
-Route::get('addProduct2',[productController::class,'addproduct']);
-Route::post('saveProduct2',[productController::class,'saveproduct']);
-Route::get('editProduct/{id}',[productController::class,'editproduct']);
-Route::post('updateProduct/{id}',[productController::class,'updateproduct']);
-Route::get('deleteProduct/{id}',[productController::class,'deleteproduct']);
+Route::get('productList2',[orderController::class,'index']);
+Route::get('addProduct2',[orderController::class,'addproduct']);
+Route::post('saveProduct2',[orderController::class,'saveproduct']);
+Route::get('editProduct/{id}',[orderController::class,'editproduct']);
+Route::post('updateProduct/{id}',[orderController::class,'updateproduct']);
+Route::get('deleteProduct/{id}',[orderController::class,'deleteproduct']);

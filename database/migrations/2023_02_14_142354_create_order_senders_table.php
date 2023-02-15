@@ -15,10 +15,11 @@ return new class extends Migration
     {
         Schema::create('order_senders', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('qty');
-            $table->string('unity_price');
-            $table->foreignId('order_id')->constrained('orders','id')->cascadeOnUpdate()->cascadeOnDelete();
+            $table->string('names_of_sender');
+            $table->string('location_address');
+            $table->string('email');
+            $table->unsignedBigInteger('order_id');
+            $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');
             $table->timestamps();
         });
     }

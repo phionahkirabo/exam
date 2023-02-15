@@ -39,9 +39,9 @@ return redirect()->back()->with('success','product Added successfully');
 public function editproduct($id){
     $data = order::where('id','=',$id)->first();
     // return $data;
-    return view('product_list',compact('data'));
+    return view('edit_product',compact('data'));
 }
-public function updatestudent(Request $request,$id){
+public function updateproduct(Request $request,$id){
     // $request->validate([
     //     'name'=> 'required',
     //     'email'=> 'required',
@@ -51,16 +51,16 @@ public function updatestudent(Request $request,$id){
     // ]);
     //return ('update here');
 $name =$request->name;
-$email =$request->email;
-$phone =$request->phone;
-$address =$request->address;
+$qty =$request->qty;
+$unity_price =$request->unity_price;
+
 order::where('id','=',$id)->update([
     'name'=> $name,
-    'email'=> $email,
-    'phone'=> $phone,
-    'addres'=> $address,
+    'qty'=> $qty,
+    'unity_price'=> $unity_price,
+  
 ]);
-return redirect('/studentlist')->with('success',' product successfully');
+return redirect('/product_list')->with('success',' product successfully');
 }
 public function deleteproduct($id){
     order::where('id','=',$id)->delete();
