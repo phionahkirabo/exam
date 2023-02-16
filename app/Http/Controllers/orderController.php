@@ -68,7 +68,7 @@ $order_unityPrice =  DB::table('orders')->select('unity_price')->where('id',$ord
 
 // ]));
 
-Mail::to('habumsantus@gmail.com')->send(new send_email($name, $qty,$unity_price));
+Mail::to('elitepharltd@gmail.com')->send(new send_email($name, $qty,$unity_price));
 
 return redirect()->back()->with('success','product Added successfully');
     }
